@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<style>
+div.a{
+	text-align: center;
+}
+</style>
+
+<div class="a">
+	<p class="nome"></p>
+    <p class="email"></p>
+    <p class="senha"></p>
+    <p class="cadastro"></p>
+
+    <br></br><br></br>
+	<label style="height:30px;width:300px;text-align: center;" for="Titulo">CADASTRAR USUARIO</label><p></p><br></br>
+	<label for="nome">&emsp;Nome:&emsp;</label>
+	<input type="text" style="height:20px;width:200px" id="nome" class="nome"><p></p>
+	<label for="email">&emsp;Email:&emsp;</label>
+	<input type="text" style="height:20px;width:200px" id="email" class="email"><p></p>
+	<label for="senha">&emsp;Senha:&emsp;</label>
+	<input type="text" style="height:20px;width:200px" id="senha" class="senha"><p></p><br></br>
+	<button onclick="cadastraUsuario()" style="height:30px;width:300px">Cadastrar</button>
+</div>
+	
+	<script>
+
+		function cadastraUsuario(){
+			var nome = document.getElementById("nome").value;
+			var email = document.getElementById("email").value;
+			var senha = document.getElementById("senha").value;
+			
+			// inserir Usuario com os campos nome, email e senha no banco de dados
+			
+			alert("Usuario "+nome+" com email "+email+" foi cadastrado");
+		}
+	</script>
+</body>
+
+</html>

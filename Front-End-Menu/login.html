@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<body>
+<style>
+div.a{
+	text-align: center;
+}
+</style>
+
+<div class="a">
+    <p class="email"></p>
+    <p class="senha"></p>
+    <p class="acessar"></p>
+
+    <br></br><br></br>
+	<label style="height:30px;width:300px;text-align: center;" for="Titulo">LOGIN</label><p></p><br></br>
+	<label for="email">&emsp;Email:&emsp;</label>
+	<input type="text" style="height:20px;width:200px" id="email" class="email"><p></p>
+	<label for="senha">&emsp;Senha:&emsp;</label>
+	<input type="text" style="height:20px;width:200px" id="senha" class="senha"><p></p><br></br>
+	<!--<input type="button" style="height:30px;width:300px;" value="Acessar" class="acessar"><p></p>-->
+	<button onclick="acessarUsuario()" style="height:30px;width:300px">Entrar</button>
+
+</div>
+
+	
+	<script>
+		function acessarUsuario(){
+			var email = document.getElementById("email").value;
+			var senha = document.getElementById("senha").value;
+
+			//email e senha e' usado como chave para acessar o banco de dados
+			//carregar dados do Usuario a partir do banco de dados
+			//acessar aplicacao como esse usuario
+			
+		}
+    	
+	</script>
+</body>
+
+</html>
