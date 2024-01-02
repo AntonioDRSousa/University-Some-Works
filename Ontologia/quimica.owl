@@ -1,0 +1,1813 @@
+@prefix : <http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/pc/ontologies/2022/8/quimica> .
+
+<http://www.semanticweb.org/pc/ontologies/2022/8/quimica> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#possui
+:possui rdf:type owl:ObjectProperty ;
+        rdfs:domain :Substancia ;
+        rdfs:range :Molecula .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#estado_fisico
+:estado_fisico rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Elemento ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#grupo
+:grupo rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Elemento ;
+       rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#numero_atomico
+:numero_atomico rdf:type owl:DatatypeProperty ;
+                owl:equivalentProperty :numero_de_protons ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Elemento ;
+                rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#numero_de_eletrons
+:numero_de_eletrons rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Elemento ;
+                    rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#numero_de_massa
+:numero_de_massa rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Elemento ;
+                 rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#numero_de_neutrons
+:numero_de_neutrons rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Elemento ;
+                    rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#numero_de_protons
+:numero_de_protons rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Elemento ;
+                   rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#periodo
+:periodo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Elemento ;
+         rdfs:range xsd:unsignedInt .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#simbolo
+:simbolo rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Elemento ;
+         rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido
+:Acido rdf:type owl:Class ;
+       rdfs:subClassOf :Substancia_Inorganica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Carboxilico
+:Acido_Carboxilico rdf:type owl:Class ;
+                   rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Diprotico
+:Acido_Diprotico rdf:type owl:Class ;
+                 rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Estavel
+:Acido_Estavel rdf:type owl:Class ;
+               rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Fixo
+:Acido_Fixo rdf:type owl:Class ;
+            rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Forte
+:Acido_Forte rdf:type owl:Class ;
+             rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Fraco
+:Acido_Fraco rdf:type owl:Class ;
+             rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Instavel
+:Acido_Instavel rdf:type owl:Class ;
+                rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Meta
+:Acido_Meta rdf:type owl:Class ;
+            rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Moderado
+:Acido_Moderado rdf:type owl:Class ;
+                rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Monoprotico
+:Acido_Monoprotico rdf:type owl:Class ;
+                   rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Orto
+:Acido_Orto rdf:type owl:Class ;
+            rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Piro
+:Acido_Piro rdf:type owl:Class ;
+            rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Triprotico
+:Acido_Triprotico rdf:type owl:Class ;
+                  rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Acido_Volatil
+:Acido_Volatil rdf:type owl:Class ;
+               rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Actinideo
+:Actinideo rdf:type owl:Class ;
+           rdfs:subClassOf :Metal_de_Transicao_Interna ;
+           owl:disjointWith :Lantanideo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alcadieno
+:Alcadieno rdf:type owl:Class ;
+           rdfs:subClassOf :Hidrocarboneto_Alifatico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alcadiino
+:Alcadiino rdf:type owl:Class ;
+           rdfs:subClassOf :Hidrocarboneto_Alifatico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alcano
+:Alcano rdf:type owl:Class ;
+        rdfs:subClassOf :Hidrocarboneto_Alifatico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alceno
+:Alceno rdf:type owl:Class ;
+        rdfs:subClassOf :Hidrocarboneto_Alifatico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alcino
+:Alcino rdf:type owl:Class ;
+        rdfs:subClassOf :Hidrocarboneto_Alifatico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alcool
+:Alcool rdf:type owl:Class ;
+        rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Aldeido
+:Aldeido rdf:type owl:Class ;
+         rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Alumen
+:Alumen rdf:type owl:Class ;
+        rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ametal
+:Ametal rdf:type owl:Class ;
+        rdfs:subClassOf :Elemento .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Amida
+:Amida rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Amina
+:Amina rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Anion
+:Anion rdf:type owl:Class ;
+       rdfs:subClassOf :Ion .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antiatomo
+:Antiatomo rdf:type owl:Class ;
+           rdfs:subClassOf :Antiparticula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antibarion
+:Antibarion rdf:type owl:Class ;
+            rdfs:subClassOf :Antihadron ;
+            owl:disjointWith :Antimeson .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antiboson
+:Antiboson rdf:type owl:Class ;
+           rdfs:subClassOf :Antiparticula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antifermion
+:Antifermion rdf:type owl:Class ;
+             rdfs:subClassOf :Antiparticula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antihadron
+:Antihadron rdf:type owl:Class ;
+            rdfs:subClassOf :Antiparticula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antilepton
+:Antilepton rdf:type owl:Class ;
+            rdfs:subClassOf :Antifermion ;
+            owl:disjointWith :Antiquark .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antimateria
+:Antimateria rdf:type owl:Class ;
+             rdfs:subClassOf :Universo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antimeson
+:Antimeson rdf:type owl:Class ;
+           rdfs:subClassOf :Antihadron .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antinucleo
+:Antinucleo rdf:type owl:Class ;
+            rdfs:subClassOf :Antiparticula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antiparticula
+:Antiparticula rdf:type owl:Class ;
+               rdfs:subClassOf :Antimateria .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antiquark
+:Antiquark rdf:type owl:Class ;
+           rdfs:subClassOf :Antifermion .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Atomo
+:Atomo rdf:type owl:Class ;
+       rdfs:subClassOf :Particula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Azida
+:Azida rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Azo_Composto
+:Azo_Composto rdf:type owl:Class ;
+              rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Barion
+:Barion rdf:type owl:Class ;
+        rdfs:subClassOf :Hadron .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Base
+:Base rdf:type owl:Class ;
+      rdfs:subClassOf :Substancia_Inorganica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Base_Forte
+:Base_Forte rdf:type owl:Class ;
+            rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Base_Fraca
+:Base_Fraca rdf:type owl:Class ;
+            rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Base_Insoluvel
+:Base_Insoluvel rdf:type owl:Class ;
+                rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Base_Soluvel
+:Base_Soluvel rdf:type owl:Class ;
+              rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Boson
+:Boson rdf:type owl:Class ;
+       rdfs:subClassOf :Particula_Fundamental .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Boson_Escalar
+:Boson_Escalar rdf:type owl:Class ;
+               rdfs:subClassOf :Boson .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Boson_de_Calibre
+:Boson_de_Calibre rdf:type owl:Class ;
+                  rdfs:subClassOf :Boson .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Calor
+:Calor rdf:type owl:Class ;
+       rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cation
+:Cation rdf:type owl:Class ;
+        rdfs:subClassOf :Ion .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cetona
+:Cetona rdf:type owl:Class ;
+        rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cianato
+:Cianato rdf:type owl:Class ;
+         rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ciclano
+:Ciclano rdf:type owl:Class ;
+         rdfs:subClassOf :Hidrocarboneto_Ciclico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cicleno
+:Cicleno rdf:type owl:Class ;
+         rdfs:subClassOf :Hidrocarboneto_Ciclico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ciclino
+:Ciclino rdf:type owl:Class ;
+         rdfs:subClassOf :Hidrocarboneto_Ciclico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Diacido
+:Diacido rdf:type owl:Class ;
+         rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Dibase
+:Dibase rdf:type owl:Class ;
+        rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Elemento
+:Elemento rdf:type owl:Class ;
+          rdfs:subClassOf :Materia ;
+          owl:disjointWith :Particula_Subatomica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia
+:Energia rdf:type owl:Class ;
+         rdfs:subClassOf :Universo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Cinetica
+:Energia_Cinetica rdf:type owl:Class ;
+                  rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Elastica
+:Energia_Elastica rdf:type owl:Class ;
+                  rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Eletrica
+:Energia_Eletrica rdf:type owl:Class ;
+                  rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Eletromagnetica
+:Energia_Eletromagnetica rdf:type owl:Class ;
+                         rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Escura
+:Energia_Escura rdf:type owl:Class ;
+                rdfs:subClassOf :Universo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Gravitacional
+:Energia_Gravitacional rdf:type owl:Class ;
+                       rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Magnetica
+:Energia_Magnetica rdf:type owl:Class ;
+                   rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Mecanica
+:Energia_Mecanica rdf:type owl:Class ;
+                  rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Nuclear
+:Energia_Nuclear rdf:type owl:Class ;
+                 rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Potencial
+:Energia_Potencial rdf:type owl:Class ;
+                   rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Quimica
+:Energia_Quimica rdf:type owl:Class ;
+                 rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Radiante
+:Energia_Radiante rdf:type owl:Class ;
+                  rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Sonora
+:Energia_Sonora rdf:type owl:Class ;
+                rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_Termica
+:Energia_Termica rdf:type owl:Class ;
+                 rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Energia_de_Ionizacao
+:Energia_de_Ionizacao rdf:type owl:Class ;
+                      rdfs:subClassOf :Energia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Enol
+:Enol rdf:type owl:Class ;
+      rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ester
+:Ester rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Eter
+:Eter rdf:type owl:Class ;
+      rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Fenol
+:Fenol rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Oxigenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Fermion
+:Fermion rdf:type owl:Class ;
+         rdfs:subClassOf :Particula_Fundamental .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Funcao_Organica_Nitrogenada
+:Funcao_Organica_Nitrogenada rdf:type owl:Class ;
+                             rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Funcao_Organica_Oxigenada
+:Funcao_Organica_Oxigenada rdf:type owl:Class ;
+                           rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Gas_Nobre
+:Gas_Nobre rdf:type owl:Class ;
+           rdfs:subClassOf :Ametal ;
+           owl:disjointWith :Halogenio .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hadron
+:Hadron rdf:type owl:Class ;
+        rdfs:subClassOf :Particula_Composta .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Haleto_Acido
+:Haleto_Acido rdf:type owl:Class ;
+              rdfs:subClassOf :Haleto_Organico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Haleto_Organico
+:Haleto_Organico rdf:type owl:Class ;
+                 rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Haleto_de_Alquila
+:Haleto_de_Alquila rdf:type owl:Class ;
+                   rdfs:subClassOf :Haleto_Organico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Haleto_de_Anila
+:Haleto_de_Anila rdf:type owl:Class ;
+                 rdfs:subClassOf :Haleto_Organico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Halogenio
+:Halogenio rdf:type owl:Class ;
+           rdfs:subClassOf :Ametal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidracido
+:Hidracido rdf:type owl:Class ;
+           rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrocarboneto
+:Hidrocarboneto rdf:type owl:Class ;
+                rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrocarboneto_Alifatico
+:Hidrocarboneto_Alifatico rdf:type owl:Class ;
+                          rdfs:subClassOf :Hidrocarboneto .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrocarboneto_Aromatico
+:Hidrocarboneto_Aromatico rdf:type owl:Class ;
+                          rdfs:subClassOf :Hidrocarboneto_Ciclico .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrocarboneto_Ciclico
+:Hidrocarboneto_Ciclico rdf:type owl:Class ;
+                        rdfs:subClassOf :Hidrocarboneto .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrocarboneto_Policiclico
+:Hidrocarboneto_Policiclico rdf:type owl:Class ;
+                            rdfs:subClassOf :Hidrocarboneto .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrogenossal
+:Hidrogenossal rdf:type owl:Class ;
+               rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidroxissal
+:Hidroxissal rdf:type owl:Class ;
+             rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Imida
+:Imida rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Imina
+:Imina rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ion
+:Ion rdf:type owl:Class ;
+     rdfs:subClassOf :Particula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lantanideo
+:Lantanideo rdf:type owl:Class ;
+            rdfs:subClassOf :Metal_de_Transicao_Interna .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lepton
+:Lepton rdf:type owl:Class ;
+        rdfs:subClassOf :Fermion .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lepton_Carregado
+:Lepton_Carregado rdf:type owl:Class ;
+                  rdfs:subClassOf :Lepton ;
+                  owl:disjointWith :Lepton_Neutro .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lepton_Neutro
+:Lepton_Neutro rdf:type owl:Class ;
+               rdfs:subClassOf :Lepton .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lepton_Primeira_Geracao
+:Lepton_Primeira_Geracao rdf:type owl:Class ;
+                         rdfs:subClassOf :Lepton .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lepton_Segunda_Geracao
+:Lepton_Segunda_Geracao rdf:type owl:Class ;
+                        rdfs:subClassOf :Lepton .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lepton_Terceira_Geracao
+:Lepton_Terceira_Geracao rdf:type owl:Class ;
+                         rdfs:subClassOf :Lepton .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Materia
+:Materia rdf:type owl:Class ;
+         rdfs:subClassOf :Universo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Materia_Escura
+:Materia_Escura rdf:type owl:Class ;
+                rdfs:subClassOf :Universo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Meson
+:Meson rdf:type owl:Class ;
+       rdfs:subClassOf :Hadron .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal
+:Metal rdf:type owl:Class ;
+       rdfs:subClassOf :Elemento .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal_Alcalino
+:Metal_Alcalino rdf:type owl:Class ;
+                rdfs:subClassOf :Metal_Representativo ;
+                owl:disjointWith :Metal_Alcalinoterroso .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal_Alcalinoterroso
+:Metal_Alcalinoterroso rdf:type owl:Class ;
+                       rdfs:subClassOf :Metal_Representativo .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal_Representativo
+:Metal_Representativo rdf:type owl:Class ;
+                      rdfs:subClassOf :Metal ;
+                      owl:disjointWith :Metal_de_Transicao .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal_de_Transicao
+:Metal_de_Transicao rdf:type owl:Class ;
+                    rdfs:subClassOf :Metal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal_de_Transicao_Externa
+:Metal_de_Transicao_Externa rdf:type owl:Class ;
+                            rdfs:subClassOf :Metal_de_Transicao ;
+                            owl:disjointWith :Metal_de_Transicao_Interna .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Metal_de_Transicao_Interna
+:Metal_de_Transicao_Interna rdf:type owl:Class ;
+                            rdfs:subClassOf :Metal_de_Transicao .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Molecula
+:Molecula rdf:type owl:Class ;
+          rdfs:subClassOf :Particula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Molecula_Apolar
+:Molecula_Apolar rdf:type owl:Class ;
+                 rdfs:subClassOf :Molecula ;
+                 owl:disjointWith :Molecula_Polar .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Molecula_Polar
+:Molecula_Polar rdf:type owl:Class ;
+                rdfs:subClassOf :Molecula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Monoacido
+:Monoacido rdf:type owl:Class ;
+           rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Monobase
+:Monobase rdf:type owl:Class ;
+          rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nitrato
+:Nitrato rdf:type owl:Class ;
+         rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nitrila
+:Nitrila rdf:type owl:Class ;
+         rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nitrito
+:Nitrito rdf:type owl:Class ;
+         rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nitrocomposto
+:Nitrocomposto rdf:type owl:Class ;
+               rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nitroso_Composto
+:Nitroso_Composto rdf:type owl:Class ;
+                  rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nucleo_Atomico
+:Nucleo_Atomico rdf:type owl:Class ;
+                rdfs:subClassOf :Particula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ocido_Basico
+:Ocido_Basico rdf:type owl:Class ;
+              rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organoborano
+:Organoborano rdf:type owl:Class ;
+              rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organobromado
+:Organobromado rdf:type owl:Class ;
+               rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organoclorado
+:Organoclorado rdf:type owl:Class ;
+               rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organofluorado
+:Organofluorado rdf:type owl:Class ;
+                rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organofosforado
+:Organofosforado rdf:type owl:Class ;
+                 rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organometalico
+:Organometalico rdf:type owl:Class ;
+                rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Organossulfurado
+:Organossulfurado rdf:type owl:Class ;
+                  rdfs:subClassOf :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxiacido
+:Oxiacido rdf:type owl:Class ;
+          rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxido
+:Oxido rdf:type owl:Class ;
+       rdfs:subClassOf :Substancia_Inorganica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxido_Acido
+:Oxido_Acido rdf:type owl:Class ;
+             rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxido_Anfotero
+:Oxido_Anfotero rdf:type owl:Class ;
+                rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxido_Duplo
+:Oxido_Duplo rdf:type owl:Class ;
+             rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxido_Neutro
+:Oxido_Neutro rdf:type owl:Class ;
+              rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxima
+:Oxima rdf:type owl:Class ;
+       rdfs:subClassOf :Funcao_Organica_Nitrogenada .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Particula
+:Particula rdf:type owl:Class ;
+           rdfs:subClassOf :Materia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Particula_Composta
+:Particula_Composta rdf:type owl:Class ;
+                    rdfs:subClassOf :Particula_Subatomica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Particula_Fundamental
+:Particula_Fundamental rdf:type owl:Class ;
+                       rdfs:subClassOf :Particula_Subatomica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Particula_Subatomica
+:Particula_Subatomica rdf:type owl:Class ;
+                      rdfs:subClassOf :Particula .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Peroxido
+:Peroxido rdf:type owl:Class ;
+          rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Quark
+:Quark rdf:type owl:Class ;
+       rdfs:subClassOf :Fermion .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Quark_Primeira_Geracao
+:Quark_Primeira_Geracao rdf:type owl:Class ;
+                        rdfs:subClassOf :Quark .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Quark_Segunda_Geracao
+:Quark_Segunda_Geracao rdf:type owl:Class ;
+                       rdfs:subClassOf :Quark .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Quark_Terceira_Geracao
+:Quark_Terceira_Geracao rdf:type owl:Class ;
+                        rdfs:subClassOf :Quark .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Quark_Tipo_Down
+:Quark_Tipo_Down rdf:type owl:Class ;
+                 rdfs:subClassOf :Quark ;
+                 owl:disjointWith :Quark_Tipo_Up .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Quark_Tipo_Up
+:Quark_Tipo_Up rdf:type owl:Class ;
+               rdfs:subClassOf :Quark .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal
+:Sal rdf:type owl:Class ;
+     rdfs:subClassOf :Substancia_Inorganica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Binario
+:Sal_Binario rdf:type owl:Class ;
+             rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Hidratado
+:Sal_Hidratado rdf:type owl:Class ;
+               rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Insoluvel
+:Sal_Insoluvel rdf:type owl:Class ;
+               rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Misto
+:Sal_Misto rdf:type owl:Class ;
+           rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Neutro
+:Sal_Neutro rdf:type owl:Class ;
+            rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Quaternario
+:Sal_Quaternario rdf:type owl:Class ;
+                 rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Soluvel
+:Sal_Soluvel rdf:type owl:Class ;
+             rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sal_Ternario
+:Sal_Ternario rdf:type owl:Class ;
+              rdfs:subClassOf :Sal .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Semimetal
+:Semimetal rdf:type owl:Class ;
+           rdfs:subClassOf :Elemento .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Substancia
+:Substancia rdf:type owl:Class ;
+            rdfs:subClassOf :Materia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Substancia_Inorganica
+:Substancia_Inorganica rdf:type owl:Class ;
+                       rdfs:subClassOf :Substancia ;
+                       owl:disjointWith :Substancia_Organica .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Substancia_Organica
+:Substancia_Organica rdf:type owl:Class ;
+                     rdfs:subClassOf :Substancia .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Superoxido
+:Superoxido rdf:type owl:Class ;
+            rdfs:subClassOf :Oxido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tetrabase
+:Tetrabase rdf:type owl:Class ;
+           rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tetracido
+:Tetracido rdf:type owl:Class ;
+           rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Triacido
+:Triacido rdf:type owl:Class ;
+          rdfs:subClassOf :Acido .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tribase
+:Tribase rdf:type owl:Class ;
+         rdfs:subClassOf :Base .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Universo
+:Universo rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Actinio
+:Actinio rdf:type owl:NamedIndividual ,
+                  :Actinideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Aluminio
+:Aluminio rdf:type owl:NamedIndividual ,
+                   :Metal_Representativo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Americio
+:Americio rdf:type owl:NamedIndividual ,
+                   :Actinideo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Antimonio
+:Antimonio rdf:type owl:NamedIndividual ,
+                    :Semimetal ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Argonio
+:Argonio rdf:type owl:NamedIndividual ,
+                  :Gas_Nobre ;
+         :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Arsenio
+:Arsenio rdf:type owl:NamedIndividual ,
+                  :Semimetal ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Astato
+:Astato rdf:type owl:NamedIndividual ,
+                 :Halogenio ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Bario
+:Bario rdf:type owl:NamedIndividual ,
+                :Metal_Alcalinoterroso ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Berilio
+:Berilio rdf:type owl:NamedIndividual ,
+                  :Metal_Alcalinoterroso ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Berquelio
+:Berquelio rdf:type owl:NamedIndividual ,
+                    :Actinideo ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Bismuto
+:Bismuto rdf:type owl:NamedIndividual ,
+                  :Metal_Representativo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Bohrio
+:Bohrio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Boro
+:Boro rdf:type owl:NamedIndividual ,
+               :Semimetal ;
+      :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Bromo
+:Bromo rdf:type owl:NamedIndividual ,
+                :Halogenio ;
+       :estado_fisico "liquido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cadmio
+:Cadmio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Calcio
+:Calcio rdf:type owl:NamedIndividual ,
+                 :Metal_Alcalinoterroso ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Californio
+:Californio rdf:type owl:NamedIndividual ,
+                     :Actinideo ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Carbono
+:Carbono rdf:type owl:NamedIndividual ,
+                  :Ametal ;
+         :estado_fisico "solido" ;
+         :numero_atomico 6 .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cerio
+:Cerio rdf:type owl:NamedIndividual ,
+                :Lantanideo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cesio
+:Cesio rdf:type owl:NamedIndividual ,
+                :Metal_Alcalino ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Chumbo
+:Chumbo rdf:type owl:NamedIndividual ,
+                 :Metal_Representativo ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cloro
+:Cloro rdf:type owl:NamedIndividual ,
+                :Halogenio ;
+       :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cobalto
+:Cobalto rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cobre
+:Cobre rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Copernicio
+:Copernicio rdf:type owl:NamedIndividual ,
+                     :Metal_de_Transicao_Externa ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Criptonio
+:Criptonio rdf:type owl:NamedIndividual ,
+                    :Gas_Nobre ;
+           :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Cromio
+:Cromio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Curio
+:Curio rdf:type owl:NamedIndividual ,
+                :Actinideo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Darmstadtio
+:Darmstadtio rdf:type owl:NamedIndividual ,
+                      :Metal_de_Transicao_Externa ;
+             :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Disprosio
+:Disprosio rdf:type owl:NamedIndividual ,
+                    :Lantanideo ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Dubnio
+:Dubnio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Einstenio
+:Einstenio rdf:type owl:NamedIndividual ,
+                    :Actinideo ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Enxofre
+:Enxofre rdf:type owl:NamedIndividual ,
+                  :Ametal ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Erbio
+:Erbio rdf:type owl:NamedIndividual ,
+                :Lantanideo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Escandio
+:Escandio rdf:type owl:NamedIndividual ,
+                   :Metal_de_Transicao_Externa ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Estanho
+:Estanho rdf:type owl:NamedIndividual ,
+                  :Metal_Representativo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Estroncio
+:Estroncio rdf:type owl:NamedIndividual ,
+                    :Metal_Alcalinoterroso ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Europio
+:Europio rdf:type owl:NamedIndividual ,
+                  :Lantanideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Fermio
+:Fermio rdf:type owl:NamedIndividual ,
+                 :Actinideo ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ferro
+:Ferro rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Flerovio
+:Flerovio rdf:type owl:NamedIndividual ,
+                   :Metal_Representativo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Fluor
+:Fluor rdf:type owl:NamedIndividual ,
+                :Halogenio ;
+       :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Fosforo
+:Fosforo rdf:type owl:NamedIndividual ,
+                  :Ametal ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Francio
+:Francio rdf:type owl:NamedIndividual ,
+                  :Metal_Alcalino ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Gadolinio
+:Gadolinio rdf:type owl:NamedIndividual ,
+                    :Lantanideo ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Galio
+:Galio rdf:type owl:NamedIndividual ,
+                :Metal_Representativo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Germanio
+:Germanio rdf:type owl:NamedIndividual ,
+                   :Semimetal ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hafnio
+:Hafnio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hassio
+:Hassio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Helio
+:Helio rdf:type owl:NamedIndividual ,
+                :Gas_Nobre ;
+       :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Hidrogenio
+:Hidrogenio rdf:type owl:NamedIndividual ,
+                     :Ametal ;
+            :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Holmio
+:Holmio rdf:type owl:NamedIndividual ,
+                 :Lantanideo ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Indio
+:Indio rdf:type owl:NamedIndividual ,
+                :Metal_Representativo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Iodo
+:Iodo rdf:type owl:NamedIndividual ,
+               :Halogenio ;
+      :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Iridio
+:Iridio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Iterbio
+:Iterbio rdf:type owl:NamedIndividual ,
+                  :Lantanideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Itrio
+:Itrio rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lantanio
+:Lantanio rdf:type owl:NamedIndividual ,
+                   :Lantanideo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Laurencio
+:Laurencio rdf:type owl:NamedIndividual ,
+                    :Actinideo ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Litio
+:Litio rdf:type owl:NamedIndividual ,
+                :Metal_Alcalino ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Livermorio
+:Livermorio rdf:type owl:NamedIndividual ,
+                     :Metal_Representativo ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Lutecio
+:Lutecio rdf:type owl:NamedIndividual ,
+                  :Lantanideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Magnesio
+:Magnesio rdf:type owl:NamedIndividual ,
+                   :Metal_Alcalinoterroso ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Manganes
+:Manganes rdf:type owl:NamedIndividual ,
+                   :Metal_de_Transicao_Externa ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Meitnerio
+:Meitnerio rdf:type owl:NamedIndividual ,
+                    :Metal_de_Transicao_Externa ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Mendelevio
+:Mendelevio rdf:type owl:NamedIndividual ,
+                     :Actinideo ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Mercurio
+:Mercurio rdf:type owl:NamedIndividual ,
+                   :Metal_de_Transicao_Externa ;
+          :estado_fisico "liquido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Molibdenio
+:Molibdenio rdf:type owl:NamedIndividual ,
+                     :Metal_de_Transicao_Externa ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Moscovio
+:Moscovio rdf:type owl:NamedIndividual ,
+                   :Metal_Representativo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Neodimio
+:Neodimio rdf:type owl:NamedIndividual ,
+                   :Lantanideo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Neonio
+:Neonio rdf:type owl:NamedIndividual ,
+                 :Gas_Nobre ;
+        :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Netunio
+:Netunio rdf:type owl:NamedIndividual ,
+                  :Actinideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nihonio
+:Nihonio rdf:type owl:NamedIndividual ,
+                  :Metal_Representativo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Niobio
+:Niobio rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Niquel
+:Niquel rdf:type owl:NamedIndividual ,
+                 :Metal_de_Transicao_Externa ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nitrogenio
+:Nitrogenio rdf:type owl:NamedIndividual ,
+                     :Ametal ;
+            :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Nobelio
+:Nobelio rdf:type owl:NamedIndividual ,
+                  :Actinideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oganessonio
+:Oganessonio rdf:type owl:NamedIndividual ,
+                      :Gas_Nobre ;
+             :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Osmio
+:Osmio rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Ouro
+:Ouro rdf:type owl:NamedIndividual ,
+               :Metal_de_Transicao_Externa ;
+      :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Oxigenio
+:Oxigenio rdf:type owl:NamedIndividual ,
+                   :Ametal ;
+          :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Paladio
+:Paladio rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Platina
+:Platina rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Plutonio
+:Plutonio rdf:type owl:NamedIndividual ,
+                   :Actinideo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Polonio
+:Polonio rdf:type owl:NamedIndividual ,
+                  :Metal_Representativo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Potassio
+:Potassio rdf:type owl:NamedIndividual ,
+                   :Metal_Alcalino ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Praseodimio
+:Praseodimio rdf:type owl:NamedIndividual ,
+                      :Lantanideo ;
+             :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Prata
+:Prata rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Promecio
+:Promecio rdf:type owl:NamedIndividual ,
+                   :Lantanideo ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Radio
+:Radio rdf:type owl:NamedIndividual ,
+                :Metal_Alcalinoterroso ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Radonio
+:Radonio rdf:type owl:NamedIndividual ,
+                  :Gas_Nobre ;
+         :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Renio
+:Renio rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Rodio
+:Rodio rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Roentgenio
+:Roentgenio rdf:type owl:NamedIndividual ,
+                     :Metal_de_Transicao_Externa ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Rubidio
+:Rubidio rdf:type owl:NamedIndividual ,
+                  :Metal_Alcalino ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Rutenio
+:Rutenio rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Rutherfodio
+:Rutherfodio rdf:type owl:NamedIndividual ,
+                      :Metal_de_Transicao_Externa ;
+             :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Samario
+:Samario rdf:type owl:NamedIndividual ,
+                  :Lantanideo ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Seaborgio
+:Seaborgio rdf:type owl:NamedIndividual ,
+                    :Metal_de_Transicao_Externa ;
+           :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Selenio
+:Selenio rdf:type owl:NamedIndividual ,
+                  :Ametal ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Silicio
+:Silicio rdf:type owl:NamedIndividual ,
+                  :Semimetal ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Sodio
+:Sodio rdf:type owl:NamedIndividual ,
+                :Metal_Alcalino ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Talio
+:Talio rdf:type owl:NamedIndividual ,
+                :Metal_Representativo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tantalo
+:Tantalo rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tecnecio
+:Tecnecio rdf:type owl:NamedIndividual ,
+                   :Metal_de_Transicao_Externa ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Telurio
+:Telurio rdf:type owl:NamedIndividual ,
+                  :Semimetal ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tennesso
+:Tennesso rdf:type owl:NamedIndividual ,
+                   :Halogenio ;
+          :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Terbio
+:Terbio rdf:type owl:NamedIndividual ,
+                 :Lantanideo ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Titanio
+:Titanio rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Torio
+:Torio rdf:type owl:NamedIndividual ,
+                :Actinideo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tulio
+:Tulio rdf:type owl:NamedIndividual ,
+                :Lantanideo ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Tungstenio
+:Tungstenio rdf:type owl:NamedIndividual ,
+                     :Metal_de_Transicao_Externa ;
+            :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Uranio
+:Uranio rdf:type owl:NamedIndividual ,
+                 :Actinideo ;
+        :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Vanadio
+:Vanadio rdf:type owl:NamedIndividual ,
+                  :Metal_de_Transicao_Externa ;
+         :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Xenonio
+:Xenonio rdf:type owl:NamedIndividual ,
+                  :Gas_Nobre ;
+         :estado_fisico "gasoso" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Zinco
+:Zinco rdf:type owl:NamedIndividual ,
+                :Metal_de_Transicao_Externa ;
+       :estado_fisico "solido" .
+
+
+###  http://www.semanticweb.org/pc/ontologies/2022/8/untitled-ontology-8#Zirconio
+:Zirconio rdf:type owl:NamedIndividual ,
+                   :Metal_de_Transicao_Externa ;
+          :estado_fisico "solido" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Acido
+                :Base
+                :Oxido
+                :Sal
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Acido_Carboxilico
+                :Alcool
+                :Aldeido
+                :Cetona
+                :Enol
+                :Ester
+                :Eter
+                :Fenol
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Alcadieno
+                :Alcadiino
+                :Alcano
+                :Alceno
+                :Alcino
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ametal
+                :Metal
+                :Semimetal
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Amida
+                :Amina
+                :Azida
+                :Azo_Composto
+                :Cianato
+                :Imida
+                :Imina
+                :Nitrato
+                :Nitrila
+                :Nitrito
+                :Nitrocomposto
+                :Nitroso_Composto
+                :Oxima
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ciclano
+                :Cicleno
+                :Ciclino
+                :Hidrocarboneto_Aromatico
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Elemento
+                :Ion
+                :Molecula
+                :Nucleo_Atomico
+                :Substancia
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Funcao_Organica_Nitrogenada
+                :Funcao_Organica_Oxigenada
+                :Haleto_Organico
+                :Hidrocarboneto
+                :Organoborano
+                :Organobromado
+                :Organoclorado
+                :Organofluorado
+                :Organofosforado
+                :Organometalico
+                :Organossulfurado
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Haleto_Acido
+                :Haleto_de_Alquila
+                :Haleto_de_Anila
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Hidrocarboneto_Alifatico
+                :Hidrocarboneto_Ciclico
+                :Hidrocarboneto_Policiclico
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Lepton_Primeira_Geracao
+                :Lepton_Segunda_Geracao
+                :Lepton_Terceira_Geracao
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Quark_Primeira_Geracao
+                :Quark_Segunda_Geracao
+                :Quark_Terceira_Geracao
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
