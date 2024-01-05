@@ -1,0 +1,2 @@
+diff s1.dat s2.dat
+time ./life_openmp < life.in > s1.dat
