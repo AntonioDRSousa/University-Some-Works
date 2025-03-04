@@ -1,5 +1,6 @@
 Controles:
 w - aumenta ângulo do braço esquerdo em torno do eixo y em 3 graus
+
 s - diminui ângulo do braço esquerdo em torno do eixo y em 3 graus
 a - diminui ângulo do braço esquerdo em torno do eixo z em 3 graus
 d - aumenta ângulo do braço esquerdo em torno do eixo z em 3 graus
